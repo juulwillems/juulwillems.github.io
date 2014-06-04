@@ -1,0 +1,87 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../bower_components/core-collapse/core-collapse.html">
+<script src="/app.js"></script>
+
+<polymer-element name="amsterdam-evaluation">
+
+
+
+<template>
+
+	<style type="text/css">
+
+	h2 {
+	        font-family: "Andale Mono", AndaleMono, monospace;
+	        font-size: 16px;
+	        color: black;
+	        text-align: center;
+	        padding-left: 20px;
+	        padding-right: 20px;
+	    }
+
+	    .hover :hover {
+              color: #000099;
+          }
+
+	p {
+			font-family: "Andale Mono", AndaleMono, monospace;
+	        font-size: 14px;
+	        color: black;
+	        text-align: center;
+	        padding-left: 20px;
+	        padding-right: 20px;
+	}
+
+</style>
+
+  <h2 id="evaluation" class="hover" on-mouseenter="{{mouseenter}}" on-mouseleave="{{mouseleave}}" on-click="{{toggle}}">Evaluation<h2>
+
+
+<core-collapse id="collapse">
+	<p>
+	In the second block, program wise, I have learned to bring everything together that we did before into a single web component. I have learned to structure my programming more: html for the content, css for styling and javascript for behavior. This served me a more structured approach to build a page and helped me to create some structure in the chaos of my programming. Besides this, it also served me a way to quicker find solutions for problems, because problems can be easier isolated when you create different webcomponents. I still have difficulties with using Firebase and making my page interactive. Also, I still haven't figured out why my data in some of the graphs is not being visualized. It worked before and I don't know what suddenly happened. I am guessing something changed in Google Chrome, because my graphs are still working in FireFox. However, there is no error in the console about it, so I don't know how to make them visible again.  
+	</p>
+
+
+	<p>
+	In my previous portfolio, I asked myself the question: how can I use programming in qualitative research/ how can I use programming in close reading? I have to admit that I still haven’t figured out how to answer this question. Perhaps, right now, it is too ambitious to try to figure this out. I wanted to try to confront an object that I am using for a paper, a programmed artwork made by Christiaan Zwanikken,  in its own language, namely programming language, and see how this could give me new insights. Abstractly this all sounds very interesting, but in practice I don’t know (yet) how to do this. I have no access to the actual programming of Zwanikken and I am not sure how I can ever ‘say’ something meaningful about it in programming language. 
+	</p>
+
+	<p>
+	However, what I also discovered this second block is the beauty of statistics and that this beauty sometimes can be enough to make programming interesting. With all the data that is now available on the internet, I like to bring different facts together and see what will happen. That is also my attempt with the page that I created for my portfolio. To see how different facts about the places in Amsterdam, where I am the most, could be visualized and how this aesthetically can be interesting. The personal aspect of the page, the fact that all these spaces are related to me, combined with the impersonal and 'cold' facts that can be ascribed to them, is what makes it interesting for me. To discover new facts and patterns related to the spaces I am visiting the most.   
+	</p>
+
+</core-collapse>
+
+
+</template>
+
+
+<script>
+  
+  Polymer('amsterdam-evaluation', {
+
+  	toggle: function() {
+
+      this.$.collapse.toggle();
+    
+  },
+
+     mouseenter: function () {
+
+this.$.evaluation.innerHTML='Click here to read my evaluation'
+
+},
+
+  mouseleave: function () {
+
+    this.$.evaluation.innerHTML='Evaluation'
+
+  }
+    });
+
+  </script>
+
+
+</polymer-element>

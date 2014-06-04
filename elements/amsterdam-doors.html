@@ -1,0 +1,66 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-collapse/core-collapse.html">
+<link rel="import" href="../elements/door-pictures.html">
+
+
+<polymer-element name="amsterdam-doors">
+	<template>
+
+		<style type="text/css">
+
+		h2 {
+              font-family: "Andale Mono", AndaleMono, monospace;
+              font-size: 16px;
+              color: black;
+              text-align: center;
+          }
+
+            .hover :hover {
+              color: #000099;
+          }
+
+		</style>
+
+		<h2 class="hover" id="doors" on-click="{{toggle}}" on-mouseenter="{{mouseenter}}" on-mouseleave="{{mouseleave}}">Doors</h2>
+
+		<core-collapse id="collapse">
+
+			<door-pictures pictures="{{pictures}}"></door-pictures>
+
+		</core-collapse>
+
+	</template>
+
+	<script>
+
+		Polymer('amsterdam-doors', {
+
+	
+		
+
+		    toggle: function () {
+
+		 		this.$.collapse.toggle();
+		 	},
+
+
+    		mouseenter: function () {
+			
+			this.$.doors.innerHTML='Click here to see the Pictures'
+
+		},
+
+		  	mouseleave: function () {
+
+		 this.$.doors.innerHTML='Doors'
+
+		 }
+
+		 	
+
+	});
+
+
+	</script>
+
+</polymer-element>
