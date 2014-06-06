@@ -14,7 +14,13 @@ h1 {
     }
 
 
+h2 {
 
+	font-family: "Andale Mono", AndaleMono, monospace;
+        font-size: 18px;
+        color: black;
+        text-align: center;
+}
 
  
 
